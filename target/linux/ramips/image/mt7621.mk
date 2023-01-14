@@ -915,6 +915,7 @@ TARGET_DEVICES += iptime_a8004t
 
 define Device/jcg_jhr-ac876m
   $(Device/dsa-migration)
+  $(Device/uimage-lzma-loader)
   IMAGE_SIZE := 16064k
   IMAGES += factory.bin
   IMAGE/factory.bin := $$(sysupgrade_bin) | check-size | jcg-header 89.1
